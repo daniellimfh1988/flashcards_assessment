@@ -1,0 +1,19 @@
+
+<div class="container">
+  <h1>Please select your deck to play flashcards</h1>
+
+
+<ul>
+    <% @available_decks.each do |deck| %>
+      <li><b><%= p deck.name %></li></b>
+      <a href = "/flashcards/<%= deck.id %>">Select</a>
+      <br>
+      <%end%>
+</ul>
+
+
+
+</div>
+
+
+

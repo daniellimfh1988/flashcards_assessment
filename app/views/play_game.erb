@@ -1,0 +1,12 @@
+<div class="container">
+
+  <p><%= @random_card.language_one%> for round <%= @round.id %>
+  <form action="/play_game/guess" method="post">
+    <input type="text" name="user_input" placeholder="Translate">
+    <input type="submit" value="Translate?">
+  </form>
+
+  </p>
+
+</div>
+

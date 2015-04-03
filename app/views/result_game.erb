@@ -1,0 +1,33 @@
+<div class="container">
+
+<h1>Please find a summary of your performance</h1>
+
+<% @results.each do |t| %>
+<h3>Real Answer:
+<%= p t.card.language_one %>
+</h3>
+
+<p>Your Answer:
+<%= p t.user_input %>
+</p>
+
+<p><i>Result:
+<%= p t.result %>
+<br>
+<%end%>
+</i></p>
+
+
+<%@rounds.each do |round|%>
+  Round <%= p round.id %>
+  Total guesses: <%= p round.guesses.count %>
+  Total correct guesses: <%= p round.guesses.where(result: "Correct").count%>
+  Total incorrect guesses: <%= p round.guesses.where(result: "Wrong").count%>
+  <br>
+<%end%>
+
+
+
+
+</div>
+
